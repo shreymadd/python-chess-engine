@@ -1,0 +1,180 @@
+================================================================================
+                        CHESS ENGINE - HOW TO PLAY GUIDE
+================================================================================
+
+WELCOME TO THE PYTHON CHESS ENGINE!
+====================================
+
+This guide will teach you everything you need to know to play chess against our AI engine.
+
+BASIC SETUP
+===========
+- You play as White (moves first)
+- The AI plays as Black (responds to your moves)
+- The game uses standard chess rules
+- Enter moves in UCI (Universal Chess Interface) notation
+
+CHESS NOTATION - UCI FORMAT
+============================
+
+UCI notation uses the format: [from_square][to_square][promotion]
+
+Examples:
+- e2e4    = Move piece from e2 to e4 (King's pawn opening)
+- g1f3    = Move knight from g1 to f3
+- e7e8q   = Move pawn from e7 to e8 and promote to Queen
+- e1g1    = Castle kingside (king moves from e1 to g1)
+- e1c1    = Castle queenside (king moves from e1 to c1)
+
+BOARD COORDINATES
+=================
+
+Files (columns): a, b, c, d, e, f, g, h (left to right)
+Ranks (rows):    1, 2, 3, 4, 5, 6, 7, 8 (bottom to top for White)
+
+   a b c d e f g h
+ 8 r n b q k b n r  8
+ 7 p p p p p p p p  7
+ 6 . . . . . . . .  6
+ 5 . . . . . . . .  5
+ 4 . . . . . . . .  4
+ 3 . . . . . . . .  3
+ 2 P P P P P P P P  2
+ 1 R N B Q K B N R  1
+   a b c d e f g h
+
+PIECE SYMBOLS
+=============
+K/k = King    (most important piece)
+Q/q = Queen   (most powerful piece)
+R/r = Rook    (castle piece)
+B/b = Bishop  (diagonal mover)
+N/n = Knight  (L-shaped mover)
+P/p = Pawn    (foot soldier)
+
+Uppercase = White pieces
+Lowercase = Black pieces
+
+BASIC CHESS RULES
+=================
+
+1. OBJECTIVE: Checkmate the opponent's king
+
+2. PIECE MOVEMENTS:
+   - Pawn: Forward one square (two on first move), captures diagonally
+   - Rook: Horizontally or vertically any distance
+   - Bishop: Diagonally any distance
+   - Queen: Combines rook and bishop movement
+   - Knight: L-shape (2+1 squares in any direction)
+   - King: One square in any direction
+
+3. SPECIAL MOVES:
+   - Castling: King and rook move together (kingside: e1g1, queenside: e1c1)
+   - En passant: Special pawn capture
+   - Promotion: Pawn reaching end promotes to Queen, Rook, Bishop, or Knight
+
+4. GAME ENDINGS:
+   - Checkmate: King is attacked and cannot escape (you win/lose)
+   - Stalemate: No legal moves but king not in check (draw)
+   - Insufficient material: Not enough pieces to checkmate (draw)
+   - Threefold repetition: Same position occurs 3 times (draw)
+
+PLAYING THE GAME
+================
+
+1. Start the game by running: python main.py
+2. The board will be displayed with coordinates
+3. Enter your move when prompted (e.g., "e2e4")
+4. The AI will think and respond with its move
+5. Continue until the game ends
+6. Type "quit" at any time to exit
+
+COMMON OPENING MOVES
+====================
+
+Good first moves for White:
+- e2e4  (King's Pawn - controls center, opens lines)
+- d2d4  (Queen's Pawn - controls center, solid)
+- g1f3  (King's Knight - develops piece, controls center)
+- c2c4  (English Opening - flexible, controls d5)
+
+TIPS FOR BETTER PLAY
+====================
+
+1. OPENING PRINCIPLES:
+   - Control the center (e4, e5, d4, d5 squares)
+   - Develop knights before bishops
+   - Castle early for king safety
+   - Don't move the same piece twice in opening
+
+2. MIDDLE GAME:
+   - Look for tactics (forks, pins, skewers)
+   - Improve piece positions
+   - Create threats and pressure
+   - Control key squares and files
+
+3. ENDGAME:
+   - Activate your king
+   - Push passed pawns
+   - Centralize pieces
+   - Learn basic checkmate patterns
+
+UNDERSTANDING THE AI
+====================
+
+The AI uses:
+- Material evaluation (piece values)
+- Positional evaluation (piece placement)
+- Minimax algorithm with Alpha-Beta pruning
+- Search depth of 3 moves ahead
+
+The AI will:
+- Try to win material (capture pieces)
+- Improve piece positions
+- Avoid losing pieces
+- Look for tactical opportunities
+
+TROUBLESHOOTING
+===============
+
+If you enter an illegal move:
+- The game will show you it's illegal
+- It may display some legal moves as examples
+- Try again with a valid move
+
+If you're stuck:
+- Type "quit" to exit
+- Restart with: python main.py
+- Check this guide for notation help
+
+EXAMPLE GAME START
+==================
+
+Game starts:
+  a b c d e f g h
+8|r n b q k b n r|8
+7|p p p p p p p p|7
+6|. . . . . . . .|6
+5|. . . . . . . .|5
+4|. . . . . . . .|4
+3|. . . . . . . .|3
+2|P P P P P P P P|2
+1|R N B Q K B N R|1
+  a b c d e f g h
+
+Your turn (White):
+Enter your move: e2e4
+
+You played: e2e4
+AI is thinking...
+AI plays: e7e5
+
+And the game continues!
+
+HAVE FUN AND GOOD LUCK!
+========================
+
+Remember: Chess is a game of patience, strategy, and learning from mistakes.
+The more you play, the better you'll become!
+
+For questions about chess rules, visit: https://www.chess.com/learn-how-to-play-chess
